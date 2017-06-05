@@ -4,17 +4,32 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { routing } from "./app.routes";
+import { LoginComponent } from './public/auth/login.component';
+import { AuthenticationService } from "./service/authentication.service";
+import { HomeComponent } from './public/home.component';
+import { AboutComponent } from './public/about.component';
+import { SignupComponent } from './public/auth/signup.component';
+import { LandingHomeComponent } from './public/landing-home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    AboutComponent,
+    SignupComponent,
+    LandingHomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [
+    AuthenticationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

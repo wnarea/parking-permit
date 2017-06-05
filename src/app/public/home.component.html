@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default navbar-fixed-top topnav">
+  <div class="container topnav">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/home']">City of Miami Beach</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right" routerLinkActive="active">
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/home/about']">About</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/home/signup']">Sign Up</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/home/login']">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
